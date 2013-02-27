@@ -6,6 +6,12 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
+  def destroy
+    self.current_user = nil
+    flash[:info] = "Signed out"
+    redirect_to '/'
+  end
+
   protected
 
   def auth_hash

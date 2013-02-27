@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user= user
-    session["current_user_id"] = user.id
+    session["current_user_id"] = user.try :id
   end
 
   def current_user

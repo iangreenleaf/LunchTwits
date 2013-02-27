@@ -49,4 +49,5 @@ LunchTwits::Application.routes.draw do
   #     resources :products
   #   end
   get '/auth/stocktwits/callback' => "sessions#create"
+  delete '/logout' => "sessions#destroy", as: "logout"
 end
