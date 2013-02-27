@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
       :provider => h["provider"],
       :uid => h["uid"],
       :username => h["info"]["nickname"],
+      :name => h["info"]["name"],
       :token => h["credentials"]["token"]
     )
     u.save!

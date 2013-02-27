@@ -11,5 +11,5 @@
       %h1 LunchTwits
       - if current_user.present?
         Welcome,
-        = current_user.username
+        = current_user.name
     = yield
