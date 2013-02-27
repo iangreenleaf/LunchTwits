@@ -12,3 +12,8 @@
  *= require_tree .
  *= require_tree ./bootstrap
  */
+
+.signin {
+  padding-top: 20%;
+  text-align: center;
+}
