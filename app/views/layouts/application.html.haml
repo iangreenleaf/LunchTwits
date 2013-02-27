@@ -7,4 +7,9 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
+    %header
+      %h1 LunchTwits
+      - if current_user.present?
+        Welcome,
+        = current_user.username
     = yield

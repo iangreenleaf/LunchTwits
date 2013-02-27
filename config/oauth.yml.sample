@@ -1,0 +1,3 @@
+stocktwits:
+  key: "MY_KEY"
+  secret: "MY_SECRET"
