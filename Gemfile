@@ -27,6 +27,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 gem 'haml'
+gem "haml-rails"
+gem 'omniauth'
+gem 'omniauth-stocktwits', git: 'git://github.com/jesseyoungmann/omniauth-stocktwits.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
