@@ -17,3 +17,9 @@
   padding-top: 20%;
   text-align: center;
 }
+.auth-info {
+  .signout, .welcome {
+    float: right;
+    clear: right;
+  }
+}
