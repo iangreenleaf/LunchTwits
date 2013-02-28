@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def create
-    logger.debug auth_hash.inspect
     @user = User.find_or_create_from_auth_hash(auth_hash)
     self.current_user = @user
     redirect_to '/'
