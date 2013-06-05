@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  notes: MyText
+  restaurant_id: 
+  occurring: 2013-06-05 11:26:06
+
+two:
+  title: MyString
+  notes: MyText
+  restaurant_id: 
+  occurring: 2013-06-05 11:26:06

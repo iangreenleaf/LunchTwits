@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130410185654) do
+ActiveRecord::Schema.define(version: 20130605182749) do
+
+  create_table "lunches", force: true do |t|
+    t.string   "title"
+    t.text     "notes"
+    t.integer  "restaurant_id"
+    t.datetime "occurring"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lunches", ["restaurant_id"], name: "index_lunches_on_restaurant_id", using: :btree
+
+  create_table "orders", force: true do |t|
+    t.integer  "lunch_id"
+    t.integer  "user_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "orders", ["lunch_id"], name: "index_orders_on_lunch_id", using: :btree
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
   create_table "restaurants", force: true do |t|
     t.string   "name"
