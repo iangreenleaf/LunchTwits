@@ -16,6 +16,8 @@
               Welcome,
               = current_user.name
             = link_to "Log out", logout_path, method: :delete, class: "signout"
+        - else
+          = link_to "/auth/stocktwits", "Sign In With StockTwits"
       .messages.row-fluid
         - %i[info notice error success].each do |level|
           - if flash[level].present?

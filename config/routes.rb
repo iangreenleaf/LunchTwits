@@ -1,4 +1,9 @@
 LunchTwits::Application.routes.draw do
+  resources :lunch do
+    member do
+      post :vote
+    end
+  end
   resources :restaurants
   root to: 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
