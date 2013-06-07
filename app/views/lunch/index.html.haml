@@ -1,2 +1,4 @@
-%h1 Lunch#index
-%p Find me in app/views/lunch/index.html.haml
+%h1 Today's Lunch
+- @lunches.each do |lunch|
+  = link_to lunch.title, lunch_path(lunch)
+= link_to "New lunch", new_lunch_path
